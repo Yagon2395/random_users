@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:random_users/src/presentation/home/home.dart';
 
-void main() {
+import 'src/di/injector.dart';
+
+void main() async {
+  await initializeDependencies();
   runApp(const MyApp());
 }
 

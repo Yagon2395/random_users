@@ -1,0 +1,13 @@
+export './models/random_user/coordinates_model.dart';
+export './models/random_user/dob_model.dart';
+export './models/random_user/id_model.dart';
+export './models/random_user/info_model.dart';
+export './models/random_user/location_model.dart';
+export './models/random_user/login_model.dart';
+export './models/random_user/name_model.dart';
+export './models/random_user/picture_model.dart';
+export './models/random_user/registered_model.dart';
+export './models/random_user/result_model.dart';
+export './models/random_user/street_model.dart';
+export './models/random_user/timezone_model.dart';
+export './models/random_user/random_user_response.dart';
