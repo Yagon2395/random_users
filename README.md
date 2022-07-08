@@ -1,16 +1,18 @@
 # random_users
 
-A new Flutter project.
+This project is a sample of how to build a Flutter application using de benefits of **Clean Architecture**, **TDD** and **Functional Programming**.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+It uses the [Retrofit](https://github.com/trevorwang/retrofit.dart) package, so you have to run the following command to generate some files:
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+# dart
+pub run build_runner build
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# flutter	
+flutter pub run build_runner build
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### License
+MIT
