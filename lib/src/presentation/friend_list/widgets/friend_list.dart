@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:random_users/src/presentation/friend_list/bloc/friend_list_bloc.dart';
 import 'package:random_users/src/presentation/friend_list/widgets/friend_item.dart';
+import 'package:random_users/src/presentation/shared/network_error.dart';
 import 'package:random_users/src/presentation/shared/network_status.dart';
 
 import '../../../domain/domain.dart';
@@ -26,6 +27,13 @@ class FriendList extends StatelessWidget {
         // When tried to fetch data but did not return any user
         else if (state.status == NetworkStatus.loaded && users.isEmpty) {
           return const Center(child: Text('Empty list'));
+        } else if (state.status == NetworkStatus.error) {
+          return NetWorkError(
+            btnMessage: 'Fetch users',
+            action: () {
+              context.read<FriendListBloc>().add(FetchRandomUsersRequested());
+            },
+          );
         }
         // When fetched data successfully
         else {
